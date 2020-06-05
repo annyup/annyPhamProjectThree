@@ -1,0 +1,34 @@
+@media (max-width: 480px) {
+
+    .timelineContainer {
+        display: flex;
+        flex-direction: column;
+
+        top: 5%;
+
+        .timelineLine {
+            rotate: 90deg;
+            top: 380px;
+            margin: 0 -14.2%;
+            width: 500px;
+            left: 0;
+        }
+    }
+
+
+    .albumButton {
+        margin: 100px auto;
+    }
+
+    .albumButton > span {
+        top: 125px;
+    }
+
+    .albumButton.active {
+        width: 55%;
+    }
+
+    .carousel-cell {
+        height: 800px;
+    }
+}
