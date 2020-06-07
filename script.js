@@ -171,7 +171,7 @@ $(function() {
 const play = function playMusicById (soundId) {
 
   let audio = document.getElementById(soundId);
-
+  
   // looks for all other tracks and stops them
   $('audio').each(function(){
 
@@ -182,12 +182,21 @@ const play = function playMusicById (soundId) {
       this.pause();
       this.currentTime = 0;
     }
+
   });
 
   // handles the currently clicked audio
   // plays the currently clicked audio, or stops if it is already playing
-  if (audio.paused)
+  if (audio.paused) {
     audio.play();
+
+    // sound timesout when it meets 30 seconds
+    // resets current time to 0
+    setTimeout(function () {
+      audio.pause();
+      audio.currentTime = 0;
+    }, 30000);
+  }
     else {
       audio.pause();
       audio.currentTime = 0;
