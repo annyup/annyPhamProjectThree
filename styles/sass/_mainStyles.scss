@@ -1,0 +1,235 @@
+body {
+    background-color: #F4F7FC;
+    font-family: 'Zilla Slab', serif;
+}
+  
+.wrapper {
+    max-width: 1920px;
+    width: 75%;
+    margin: 0 auto;
+
+    .carousel {
+        margin: 6% 0 3.2% 0;
+    }
+}
+  
+
+h1 {
+    font-family: 'Lora', serif;
+    font-size: 3.0rem;
+    letter-spacing: 0.2rem;
+    text-transform: lowercase;
+    color: #4A455C;
+
+    span {
+        display: inline-block;
+        height: 50px;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 60%, #b8b3e2 40%);
+    }
+}
+  
+h2 {
+    font-family: 'Zilla Slab', serif;
+    font-size: 1.8rem;
+    color: #4A455C;
+    margin: 0;
+}
+  
+h3 {
+    font-size: 2.0rem;
+    color: #4A455C;
+    position: absolute;
+    top: 0;
+    margin: 0 auto;
+}
+  
+p {
+    color: #4A455C;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-family: 'Zilla Slab', serif;
+    letter-spacing: 0.2rem;
+}
+  
+p.active {
+    display: none;
+}
+  
+img {
+    display: block;
+    width: 100%;
+    object-fit: contain;
+}
+  
+.headerWrapper {
+    display: flex;
+    padding-top: 5%;
+    justify-content: space-between;
+}
+
+.textContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 30%;
+
+    p {
+        font-size: 1.0rem;
+        line-height: 1.5rem;
+        margin-top: 20px;
+        text-transform: none;
+    }
+}
+
+.imageContainer {
+    width: 65%;
+    display: flex;
+    justify-content: flex-end;
+}
+ 
+#randomize {
+    background-color: transparent;
+    color: #4A455C;
+    font-size: 1.0rem;
+    letter-spacing: 0.2rem;
+    text-transform: lowercase;
+    font-family: 'Zilla Slab', serif;
+    width: 130px;
+    padding: 5px 0;
+    border: 1px solid #4A455C;
+    transition: 0.5s ease-in-out;
+
+    &:hover {
+        background-color: #b8b3e2;
+    }
+}
+
+
+.timelineFlex {
+    display: flex;
+    justify-content: center;
+}
+
+.timelineContainer {
+    width: 90%;
+    top: 150px;
+    position: absolute;
+    text-align: center;
+    margin: 0 auto;
+
+    .timelineLine {
+        display: block;
+        width: 93.9%;
+        height: 20px;
+        border-radius: 20px;
+        background: linear-gradient(90deg, rgba(148,187,233,1) 0%, rgba(238,174,202,1) 50%, rgba(243,204,189,1) 100%);
+        position: absolute;
+        top: 40px;
+        left: 3%;
+        margin-left: 2.5px;
+    }
+}
+
+.albumButton {
+    width: 15%;
+    display: inline-block;
+    position: relative;
+    height: 100%;
+    margin-right: -5px;
+    z-index: 1;
+
+    p {
+        font-size: 1.0rem;
+    }
+}
+
+.albumButton > span {
+    height: 2rem;
+    display: block;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    width: 100%;
+}
+
+.albumButton > span:before {
+    content: " ";
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: #FFF;
+    margin: 0 auto 20px auto;
+    border-radius: 50%;
+    box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.75);
+}
+
+.albumButtonHover {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 34px;
+    margin-top: -50%;
+    width: 100%;
+
+    a {
+        display: block;
+        width: 100%;
+        height: 100%;
+
+        img {
+            border-radius: 50%;
+            max-height: 100%;
+            max-width: 100%;
+            border: 3px solid white;
+        }
+
+        span {
+            position: absolute;
+            width: 250%;
+            margin-left: -75%;
+            bottom: -2rem;
+            left: 0;
+            font-family: 'Zilla Slab', serif;
+            font-size: 1.2rem;
+            text-decoration: none;
+            white-space: nowrap;        
+            color: #4A455C;
+        }
+    }
+}
+
+
+.albumButton.active {
+    width: 15%;
+
+    p {
+        display: none;
+    }
+
+    .albumButtonHover {
+        display: block;
+        }
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    text-align: center;
+    padding: 2px 0;
+}
+
+footer p {
+        text-transform: none;
+        color: #4A455C;
+        font-size: 1.0rem;
+}
+
+
+/* Flickity */
+  
+.carousel-cell {
+    width: 100%;
+    height: 400px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
