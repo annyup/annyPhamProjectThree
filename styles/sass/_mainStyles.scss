@@ -141,6 +141,10 @@ img {
     p {
         font-size: 1.0rem;
     }
+
+    img {
+        filter: grayscale(50%);
+    }
 }
 
 .albumButton > span {
@@ -184,16 +188,16 @@ img {
         }
 
         span {
+            color: #FFF;
+            font-family: 'Lora', serif;
+            font-size: 1.3rem;
             position: absolute;
-            width: 250%;
-            margin-left: -75%;
-            bottom: -2rem;
-            left: 0;
-            font-family: 'Zilla Slab', serif;
-            font-size: 1.2rem;
+            top: 50%;
+            right: 50%;
+            transform: translate(50%, -50%);
             text-decoration: none;
-            white-space: nowrap;        
-            color: #4A455C;
+            text-shadow: 1px 1px 1px #000;
+            text-transform: uppercase;
         }
     }
 }
@@ -208,7 +212,7 @@ img {
 
     .albumButtonHover {
         display: block;
-        }
+    }
 }
 
 footer {
